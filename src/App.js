@@ -24,12 +24,16 @@ function App() {
     setListOffset(listOffset + 100);
   }
 
+  const filteredList = pokemonList.filter(pokemon => {
+    return pokemon.name.startsWith(searchItem)
+  });
+
   return (
     <div className="App">
       <h1>Pokedex</h1>
-      <input onChange={e => setSearchItem(e.target.value)} value={searchItem} type="text"></input>
+      <input onChange={e => setSearchItem(e.target.value.toLocaleLowerCase())} value={searchItem} type="text"></input>
       <div>
-        { pokemonList.map((pokemon) => {
+        { filteredList.map((pokemon) => {
           return (
             <li key={pokemon.name}>{pokemon.name}</li>
           );
