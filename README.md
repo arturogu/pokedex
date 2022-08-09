@@ -5,7 +5,7 @@ React Demo using the pokeapi
 -Fetch Pokemon list (100) from api ✔️\
 -pagination ✔️\
 -search / filter ✔️\
--component with Pokemon information\
+-component with Pokemon information ✔️\
 -interface, light design
 
 
