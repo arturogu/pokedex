@@ -2,11 +2,11 @@
 React Demo using the pokeapi
 
 # Road map 
--Fetch Pokemon list (100) from api\
--pagination\
--search / filter\
+-Fetch Pokemon list (100) from api ✔️\
+-pagination ✔️\
+-search / filter ✔️\
 -component with Pokemon information\
--interface, light design\
+-interface, light design
 
 
 # Getting Started with Create React App
