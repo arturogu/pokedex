@@ -41,7 +41,8 @@ function App() {
   const pokedexList = (<>
       <h1>Pokedex</h1>
       <Box sx={{maxWidth: 300, margin: 'auto'}}>
-        <TextField variant="outlined" onChange={e => setSearchItem(e.target.value.toLocaleLowerCase())} value={searchItem}/>
+        <TextField variant="outlined" onChange={e => setSearchItem(e.target.value.toLocaleLowerCase())} 
+          value={searchItem} label="Filter"/>
         <List>
           { filteredList.map((pokemon) => {
             return (
