@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Button, TextField, List, ListItem } from '@mui/material';
 import './App.css';
 
 function App() {
@@ -31,17 +32,17 @@ function App() {
   return (
     <div className="App">
       <h1>Pokedex</h1>
-      <input onChange={e => setSearchItem(e.target.value.toLocaleLowerCase())} value={searchItem} type="text"></input>
-      <div>
+      <TextField variant="outlined" onChange={e => setSearchItem(e.target.value.toLocaleLowerCase())} value={searchItem}/>
+      <List>
         { filteredList.map((pokemon) => {
           return (
-            <li key={pokemon.name}>{pokemon.name}</li>
+            <ListItem key={pokemon.name}>{pokemon.name}</ListItem>
           );
         })}
-      </div>
+      </List>
       <div>
-        { listOffset > 0 ? <button onClick={previousPage}>previous</button> : null }
-        { listOffset < 1100 ? <button onClick={nextPage}>next</button> : null }
+        { listOffset > 0 ? <Button variant="contained" onClick={previousPage}>previous</Button> : null }
+        { listOffset < 1100 ? <Button variant="contained" onClick={nextPage}>next</Button> : null }
       </div>
     </div>
   );
