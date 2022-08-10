@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Box, Button, TextField, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import Pokemon from './Pokemon';
+import Pokemon from './Pokemon/Pokemon';
 import './App.css';
 
 function App() {
@@ -48,14 +48,14 @@ function App() {
             return (
               <ListItem key={pokemon.name} >
                 <ListItemButton onClick={() => getPokemon(pokemon.url)}>
-                  <ListItemText>{pokemon.name}</ListItemText>
+                  <ListItemText sx={{ textTransform: 'capitalize' }}>{pokemon.name}</ListItemText>
                 </ListItemButton>
               </ListItem>
             );
           })}
         </List>
-        { listOffset > 0 ? <Button variant="contained" onClick={previousPage} sx={{mr: 'auto'}}>previous</Button> : null }
-        { listOffset < 1100 ? <Button variant="contained" onClick={nextPage}>next</Button> : null }
+        { listOffset > 0 ? <Button variant="contained" onClick={previousPage} sx={{mr: "1em", minWidth: 105}}>previous</Button> : null }
+        { listOffset < 1100 ? <Button variant="contained" onClick={nextPage} sx={{minWidth: 105}}>next</Button> : null }
       </Box>
   </>);
 

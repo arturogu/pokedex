@@ -1,0 +1,18 @@
+h1 {
+    text-transform: capitalize;
+    font-family: 'Roboto';
+}
+
+.pokemon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.type {
+    text-transform: capitalize;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    margin: .5em 0;
+}
